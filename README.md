@@ -4,7 +4,7 @@ I created my first game with PyGame modules of Python.
 # Demo
 ![Farmers Market Finder Demo](Demo/Demo.gif)
 
-# Future Uogradation
+# Future Upgradation
 Rocket able to shoot lasers and destroy approaching targets.
 Adding more different types of asteroids and enemy ships.
 
