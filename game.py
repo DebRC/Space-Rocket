@@ -16,26 +16,26 @@ screen=pygame.display.set_mode((WIDTH,HEIGHT))
 
 #caption and icon
 pygame.display.set_caption("Space Rocket")
-icon=pygame.image.load("icon.png")
+icon=pygame.image.load("Images\\icon.png")
 pygame.display.set_icon(icon)
 
 #player
-player_image=pygame.image.load("rocket.png")
+player_image=pygame.image.load("Images\\rocket.png")
 player_size=30
 player_pos=[int(WIDTH/2),int(HEIGHT-3*player_size)]
 
 #enemy
-enemy_image=pygame.image.load("asteroid.png")
+enemy_image=pygame.image.load("Images\\asteroid.png")
 enemy_size = 50
 enemy_pos = [random.randint(0,WIDTH-enemy_size),random.randint(0,HEIGHT)]
 enemy_list=[enemy_pos]
 enemy_speed=0
 
 #background image
-background = pygame.image.load("background.png")
+background = pygame.image.load("Images\\background.png")
 
 #background sound
-mixer.music.load("background.ogg")
+mixer.music.load("Sounds\\background.ogg")
 mixer.music.play(-1)
 
 #basic
@@ -45,7 +45,7 @@ clock=pygame.time.Clock()
 
 #fonts
 myFont=pygame.font.SysFont("calibri",35, bold=True, italic=True)
-game_over_font=pygame.font.Font("font.otf",60,italic=True)
+game_over_font=pygame.font.Font("Fonts\\font.otf",60,italic=True)
 
 def speed(score, enemy_speed):
     if score<10:
@@ -90,7 +90,7 @@ def collision(player_pos, enemy_pos):
     e_y=enemy_pos[1]
     if (e_x>=p_x and e_x<(p_x+player_size)) or (p_x>=e_x and p_x<(e_x+enemy_size)):
         if(e_y>=p_y and e_y<(p_y+player_size)) or (p_y>=e_y and p_y<(e_y+enemy_size)):
-            explosion=mixer.Sound("explosion.wav")
+            explosion=mixer.Sound("Sounds\\explosion.wav")
             mixer.music.stop()
             explosion.play()
             return True
