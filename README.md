@@ -1,7 +1,7 @@
 # Space-Rocket
 A simple GUI game implemented using Pygame Library of Python.
 
-### Demo
+### Gameplay
 ![Farmers Market Finder Demo](Demo/Demo.gif)
 
 ### Future Upgradation
