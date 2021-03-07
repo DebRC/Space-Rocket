@@ -101,7 +101,7 @@ def gameover(game_over, score):
     text=" Game Over !"
     label=game_over_font.render(text, 1, (255, 153, 102))
     screen.blit(label,(int(WIDTH/2)-150,int(HEIGHT/2)-30))
-    text="Your Score - "+str(score)
+    text="Your Score: "+str(score)
     label=game_over_font.render(text, 1, (255, 153, 102))
     screen.blit(label,(int(WIDTH/2)-150,int(HEIGHT/2)+20))
     for event in pygame.event.get():
